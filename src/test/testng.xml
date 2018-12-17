@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="JenkinsSuite" parallel="false">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="address" value="http://localhost:8080/"/>
+
+    <parameter name="adminUsername" value="admin"/>
+    <parameter name="adminPassword" value="549e664bc3f24cf496528df289e28caa"/>
+
+    <parameter name="firefoxPath" value="C:\\Projects\\TAT\\geckodriver.exe"/>
+    <parameter name="chromePath" value="C:\\Projects\\TAT\\chromedriver.exe"/>
+
+
+    <parameter name="username" value="someuser"/>
+    <parameter name="password" value="somepassword"/>
+    <parameter name="fullname" value="Some Full Name"/>
+    <parameter name="email" value="some@addr.dom"/>
+
+    <test name="JenkinsTest">
+        <classes>
+            <class name="JenkinsTest">
+                <methods>
+                    <include name="manageUsers" />
+                    <include name="testIsCreateUserAvailable" />
+                    <include name="testIsFormDisplayed" />
+                    <include name="testIsUserDisplayed" />
+                    <include name="testIsDeleteMessageDisplayed" />
+                    <include name="testYesAction" />
+                    <include name="testIsDeleteLinkAbsent" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
